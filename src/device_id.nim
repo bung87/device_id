@@ -10,4 +10,5 @@ when defined(macosx):
     discard get_platform_uuid(result.cstring)
 
 when isMainModule:
-  echo getPlatformUUID()
+  when defined(macosx):
+    echo getPlatformUUID()
