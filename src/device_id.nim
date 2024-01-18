@@ -14,7 +14,7 @@ elif defined(windows):
 elif defined(linux):
   import std/[os, strutils]
 
-  proc getMachineId(): string =
+  proc getMachineId*(): string =
     result = readFile("/etc/machine-id").strip()
 
 when isMainModule:
