@@ -1,4 +1,5 @@
 when defined(macosx):
+  import std/[os]
   {.passL: "-framework CoreFoundation -framework IOKit".}
   {.compile: currentSourcePath.parentDir / "device_id" / "macosx.c".}
 
