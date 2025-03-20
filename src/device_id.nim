@@ -18,6 +18,14 @@ elif defined(linux):
   proc getMachineId*(): string =
     result = readFile("/etc/machine-id").strip()
 
+proc getDeviceId*: string =
+  when defined(windows):
+    return geMachineGUIDFromRegistry()
+  elif defined(linux):
+    return getMachineId()
+  elif defined(macosx):
+    return getPlatformUUID()
+
 when isMainModule:
   when defined(macosx):
     echo getPlatformUUID()
