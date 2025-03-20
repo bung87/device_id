@@ -1,2 +1,3 @@
 nimTitle	device_id	device_id.html	module src/device_id		0
 nim	getMachineId	device_id.html#getMachineId	proc getMachineId(): string		18
+nim	getDeviceId	device_id.html#getDeviceId	proc getDeviceId(): string		21
